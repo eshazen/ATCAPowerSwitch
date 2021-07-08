@@ -1,0 +1,314 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L PowerSwitch:LatchingRelay RY?
+U 1 1 60E70331
+P 6500 3550
+F 0 "RY?" H 6850 3825 50  0000 C CNN
+F 1 "LatchingRelay" H 6850 3734 50  0000 C CNN
+F 2 "" H 6500 3550 50  0001 C CNN
+F 3 "" H 6500 3550 50  0001 C CNN
+	1    6500 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L PowerSwitch:SW_thermo SW?
+U 1 1 60E72030
+P 4600 5050
+F 0 "SW?" V 4554 5328 50  0000 L CNN
+F 1 "SW_thermo" V 4645 5328 50  0000 L CNN
+F 2 "" H 4600 5050 50  0001 C CNN
+F 3 "~" H 4600 5050 50  0001 C CNN
+	1    4600 5050
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_Push_Open SW?
+U 1 1 60E72B20
+P 4600 4500
+F 0 "SW?" V 4646 4447 50  0000 R CNN
+F 1 "SW_OFF" V 4555 4447 50  0000 R CNN
+F 2 "" H 4600 4700 50  0001 C CNN
+F 3 "~" H 4600 4700 50  0001 C CNN
+	1    4600 4500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4600 4300 4600 3950
+Wire Wire Line
+	4600 3950 6500 3950
+Wire Wire Line
+	4600 4700 4600 4850
+Wire Wire Line
+	4700 5250 4700 5500
+Text Notes 4850 5400 0    50   ~ 0
+THERMOSTAT\nOPEN ON TEMP RISE\n
+Text Notes 4650 4250 0    50   ~ 0
+PUSHBUTTON\n"OFF"
+Connection ~ 4600 3950
+Wire Wire Line
+	7200 3600 7400 3600
+Wire Wire Line
+	7400 3600 7400 2500
+Wire Wire Line
+	7400 2500 6250 2500
+$Comp
+L Switch:SW_Push_Open SW?
+U 1 1 60E77DDA
+P 6000 4500
+F 0 "SW?" V 6046 4447 50  0000 R CNN
+F 1 "SW_OFF" V 5955 4447 50  0000 R CNN
+F 2 "" H 6000 4700 50  0001 C CNN
+F 3 "~" H 6000 4700 50  0001 C CNN
+	1    6000 4500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6000 4300 6000 3550
+Wire Wire Line
+	6000 3550 6500 3550
+Wire Wire Line
+	6500 3650 6250 3650
+Wire Wire Line
+	6250 3650 6250 2500
+Connection ~ 6250 2500
+Wire Wire Line
+	6500 3750 6450 3750
+Wire Wire Line
+	6450 3750 6450 3850
+Wire Wire Line
+	6450 3850 6500 3850
+Wire Wire Line
+	6450 3850 6450 5500
+Wire Wire Line
+	6450 5500 6000 5500
+Connection ~ 6450 3850
+Connection ~ 4700 5500
+Wire Wire Line
+	6000 4700 6000 5500
+Connection ~ 6000 5500
+Wire Wire Line
+	6000 5500 4700 5500
+Connection ~ 6000 3550
+Wire Wire Line
+	7200 3700 8250 3700
+$Comp
+L PowerSwitch:CIRC-2 J?
+U 1 1 60E832F4
+P 8550 3700
+F 0 "J?" H 8550 4067 50  0000 C CNN
+F 1 "CIRC-2" H 8550 3976 50  0000 C CNN
+F 2 "" H 8550 3700 50  0001 C CNN
+F 3 "http://www.mouser.com/ds/2/18/40_c091_abd_e-75918.pdf" H 8550 3700 50  0001 C CNN
+	1    8550 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L PowerSwitch:CIRC-2 J?
+U 1 1 60E83A01
+P 8550 4400
+F 0 "J?" H 8550 4767 50  0000 C CNN
+F 1 "CIRC-2" H 8550 4676 50  0000 C CNN
+F 2 "" H 8550 4400 50  0001 C CNN
+F 3 "http://www.mouser.com/ds/2/18/40_c091_abd_e-75918.pdf" H 8550 4400 50  0001 C CNN
+	1    8550 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 3700 8250 4400
+Connection ~ 8250 3700
+Wire Wire Line
+	6450 5500 7300 5500
+Wire Wire Line
+	8850 5500 8850 4400
+Connection ~ 6450 5500
+Wire Wire Line
+	8850 4400 8850 3700
+Connection ~ 8850 4400
+Wire Wire Line
+	7200 3950 7400 3950
+Wire Wire Line
+	7400 3950 7400 3600
+Connection ~ 7400 3600
+$Comp
+L Device:Lamp LA?
+U 1 1 60E85739
+P 7300 4900
+F 0 "LA?" H 7428 4946 50  0000 L CNN
+F 1 "Lamp" H 7428 4855 50  0000 L CNN
+F 2 "" V 7300 5000 50  0001 C CNN
+F 3 "~" V 7300 5000 50  0001 C CNN
+	1    7300 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Lamp LA?
+U 1 1 60E85BCA
+P 7900 4900
+F 0 "LA?" H 8028 4946 50  0000 L CNN
+F 1 "Lamp" H 8028 4855 50  0000 L CNN
+F 2 "" V 7900 5000 50  0001 C CNN
+F 3 "~" V 7900 5000 50  0001 C CNN
+	1    7900 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 5100 7300 5500
+Connection ~ 7300 5500
+Wire Wire Line
+	7300 5500 7900 5500
+Wire Wire Line
+	7900 5100 7900 5500
+Connection ~ 7900 5500
+Wire Wire Line
+	7900 5500 8850 5500
+Wire Wire Line
+	7300 4700 7300 4050
+Wire Wire Line
+	7300 4050 7200 4050
+Wire Wire Line
+	7200 3850 7900 3850
+Wire Wire Line
+	7900 3850 7900 4700
+Text Notes 8000 5200 0    50   ~ 0
+GREEN\n"ON"
+Text Notes 7350 5200 0    50   ~ 0
+RED\n"OFF"
+$Comp
+L Connector:Barrel_Jack J?
+U 1 1 60E8D7E1
+P 3250 3850
+F 0 "J?" H 3307 4175 50  0000 C CNN
+F 1 "Barrel_Jack" H 3307 4084 50  0000 C CNN
+F 2 "" H 3300 3810 50  0001 C CNN
+F 3 "~" H 3300 3810 50  0001 C CNN
+	1    3250 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 3750 3800 3750
+Wire Wire Line
+	3800 3750 3800 3400
+Wire Wire Line
+	3550 3950 3800 3950
+Wire Wire Line
+	3800 3950 3800 4350
+Text Label 4250 2500 0    50   ~ 0
++12V
+Text Label 4250 5500 0    50   ~ 0
+GND
+$Comp
+L Device:LED D?
+U 1 1 60E9061F
+P 6000 3100
+F 0 "D?" V 6039 3180 50  0000 L CNN
+F 1 "LED" V 5948 3180 50  0000 L CNN
+F 2 "" H 6000 3100 50  0001 C CNN
+F 3 "~" H 6000 3100 50  0001 C CNN
+	1    6000 3100
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 60E91007
+P 6000 2700
+F 0 "R?" H 5932 2746 50  0000 R CNN
+F 1 "4.7k" H 5932 2655 50  0000 R CNN
+F 2 "" V 6040 2690 50  0001 C CNN
+F 3 "~" H 6000 2700 50  0001 C CNN
+	1    6000 2700
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 2850 6000 2950
+$Comp
+L Device:LED D?
+U 1 1 60E94F55
+P 4600 3100
+F 0 "D?" V 4639 2982 50  0000 R CNN
+F 1 "LED" V 4548 2982 50  0000 R CNN
+F 2 "" H 4600 3100 50  0001 C CNN
+F 3 "~" H 4600 3100 50  0001 C CNN
+	1    4600 3100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 60E950BB
+P 4600 2700
+F 0 "R?" H 4668 2746 50  0000 L CNN
+F 1 "4.7k" H 4668 2655 50  0000 L CNN
+F 2 "" V 4640 2690 50  0001 C CNN
+F 3 "~" H 4600 2700 50  0001 C CNN
+	1    4600 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 2850 4600 2950
+Text Notes 4650 3400 0    50   ~ 0
+"TEMP OK"
+Text Notes 5500 3400 0    50   ~ 0
+"RESET OK"
+Wire Wire Line
+	6000 3250 6000 3550
+Wire Wire Line
+	6000 2550 6000 2500
+Connection ~ 6000 2500
+Wire Wire Line
+	6000 2500 6250 2500
+Wire Wire Line
+	4600 3250 4600 3950
+Wire Wire Line
+	4600 2550 4600 2500
+Connection ~ 4600 2500
+Wire Wire Line
+	4600 2500 6000 2500
+Text Notes 5950 4250 2    50   ~ 0
+PUSHBUTTON\n"ON"
+Wire Wire Line
+	3800 2500 4600 2500
+Wire Wire Line
+	3800 5500 4700 5500
+$Comp
+L Device:Lamp LA?
+U 1 1 60EB667B
+P 4050 3850
+F 0 "LA?" H 4178 3896 50  0000 L CNN
+F 1 "Lamp" H 4178 3805 50  0000 L CNN
+F 2 "" V 4050 3950 50  0001 C CNN
+F 3 "~" V 4050 3950 50  0001 C CNN
+	1    4050 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 3650 4050 3400
+Wire Wire Line
+	4050 3400 3800 3400
+Connection ~ 3800 3400
+Wire Wire Line
+	3800 3400 3800 2500
+Wire Wire Line
+	4050 4050 4050 4350
+Wire Wire Line
+	4050 4350 3800 4350
+Connection ~ 3800 4350
+Wire Wire Line
+	3800 4350 3800 5500
+Text Notes 3900 3250 0    50   ~ 0
+WHITE\n"POWER"
+Text Notes 7100 6800 0    50   ~ 0
+ATCA Over-Temperature Shutdown\nControl Box
+$EndSCHEMATC
